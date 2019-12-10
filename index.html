@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exceed Team</title>
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+        <script src="script.js"></script>
+        
+    </head>
+
+    <body>
+    
+
+        <div class="container">
+            <h1>To Do app</h1>
+            <ul id="list-items" contenteditable="true"></ul>
+            <form class="add-items" >
+                <input type="text" class="form-control" id="todo-list-item" placeholder="Title" maxlength="35" >
+                <button class="add" type="submit">Add</button>
+            </form>
+        </div>
+        
+
+<script>  
+
+$('[id="todo-list-item"]').change(function(){
+$(this).val($(this).val().replace(/ +/g, ''));
+});
+
+</script>
+
+    </body>
+</html>
